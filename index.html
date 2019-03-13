@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="chinese (simplified)">
+<head>
+        <meta charset="utf-8" />
+        <title>Yu's Blog</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+        <link href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Yu's Blog Atom Feed" />
+        <link href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Yu's Blog RSS Feed" />
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Yu's Blog </a></h1>
+                <nav><ul>
+                    <li><a href="/category/review.html">Review</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/how-to-build-a-blog-with-pelican.html">How to build a blog with Pelican</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2018-12-17T09:12:00+08:00">
+                Published: 周一 17 十二月 2018
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/pengyan.html">pengyan</a>
+        </address>
+<p>In <a href="/category/review.html">Review</a>.</p>
+
+</footer><!-- /.post-info --><p>http://docs.getpelican.com/en/3.6.3/quickstart.html</p>
+<h2>环境</h2>
+<div class="highlight"><pre><span></span>set dir=%cd%
+set pythonHome=%dir%\python-tools\Python3.6.5
+set path=%path%;%pythonHome%;%pythonHome%\Scripts;%pythonHome%\Lib\site-packages\
+set projectName=ve3_pelican_github_page
+start cmd
+cd python-projects\virtualenvs
+python -m venv %projectName%
+pause
+</pre></div>
+
+
+<p>安装依赖包:</p>
+<div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pelican</span> <span class="n">markdown</span>
+</pre></div>
+
+
+<h2>Step 2</h2>
+<p>创建项目</p>
+<div class="highlight"><pre><span></span>mkdir -p ~/projects/yoursite
+cd ~/projects/yoursite
+pelican-quickstart
+</pre></div>
+
+
+<h2></h2>
+<p>创建内容:</p>
+<div class="highlight"><pre><span></span>Title: My First Review
+Date: 2010-12-03 10:20
+Category: Review
+</pre></div>
+
+
+<p>Following is a review of my favorite mechanical keyboard.
+Given that this example article is in Markdown format, save it as ~/projects/yoursite/content/keyboard-review.md.</p>
+<h2>生成网站</h2>
+<div class="highlight"><pre><span></span><span class="n">pelican</span> <span class="n">content</span>
+</pre></div>
+
+
+<h2>预览：</h2>
+<div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">~/</span><span class="n">projects</span><span class="o">/</span><span class="n">yoursite</span><span class="o">/</span><span class="n">output</span>
+<span class="n">python</span> <span class="o">-</span><span class="n">m</span> <span class="n">pelican</span><span class="o">.</span><span class="n">server</span>
+</pre></div>
+
+
+<p>http://docs.getpelican.com/en/3.6.3/quickstart.html</p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/hello-world.html" rel="bookmark"
+                           title="Permalink to hello world">hello world</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2010-12-03T10:20:00+08:00">
+                Published: 周五 03 十二月 2010
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="/author/pengyan.html">pengyan</a>
+        </address>
+<p>In <a href="/category/review.html">Review</a>.</p>
+
+</footer><!-- /.post-info -->                <p>hello,world</p>
+                <a class="readmore" href="/hello-world.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="/feeds/all.atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                            <li><a href="/feeds/all.rss.xml" type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
